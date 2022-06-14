@@ -1,0 +1,4 @@
+x="malay"
+
+
+print(x)
