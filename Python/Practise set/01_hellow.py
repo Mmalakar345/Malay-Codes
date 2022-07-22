@@ -1,4 +1,0 @@
-x="malay"
-
-
-print(x)
