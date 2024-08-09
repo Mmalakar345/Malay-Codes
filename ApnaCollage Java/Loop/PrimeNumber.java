@@ -8,17 +8,22 @@ public class PrimeNumber {
         int n = sc.nextInt();
         boolean isPrime = true;
 
-        for(int i=2; i<= n-1; i++){
-            if(n % i == 0){  /// n is a multiple of i (i is not equal to 1 or n)
-                isPrime = false;
-            }
-        }
-        // Cheking
-        if(isPrime == true){
+        if (n == 2) {
             System.out.println("It is a Prime number");
         }
-        else{
-            System.out.println("It is not a Prime number");
+        
+        else {
+            for (int i = 2; i <= n - 1; i++) {
+                if (n % i == 0) { /// n is a multiple of i (i is not equal to 1 or n)
+                    isPrime = false;
+                }
+            }
+            // Cheking
+            if (isPrime == true) {
+                System.out.println("It is a Prime number");
+            } else {
+                System.out.println("It is not a Prime number");
+            }
         }
     }
 }
