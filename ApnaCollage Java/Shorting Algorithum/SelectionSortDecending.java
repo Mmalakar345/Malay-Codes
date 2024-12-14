@@ -1,0 +1,28 @@
+package SortingAlgorithum;
+
+import java.util.Arrays;
+
+public class SelectionSortDecending {
+
+    public static int[] selectionSort(int[] arr, int n) {
+        for (int i = 0; i < n-1; i++) {
+            int maxidx = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[maxidx] < arr[j]) {  // Decending order detection
+                    maxidx = j;
+                }
+            }
+            int temp = arr[i]; 
+            arr[i] = arr[maxidx];
+            arr[maxidx] = temp;
+        }
+        return arr;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = { 4, 8, 7, 1, -2 };
+        int n = arr.length;
+        System.out.println(Arrays.toString(selectionSort(arr, n)));
+    }
+
+}
